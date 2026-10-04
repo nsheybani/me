@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV – Navid Sheybani</title>
+<style>
+  :root {
+    --ink: #333333;
+    --ink-soft: #555555;
+    --link: #5c4a8a;
+    --link-active: #6b3f6b;
+    --rule: #444444;
+  }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0 auto;
+    padding: 2rem 2.5rem 4rem;
+    max-width: 62rem;
+    font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink);
+    background: #ffffff;
+  }
+
+  nav {
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 1.05rem;
+  }
+
+  nav a:hover,
+  nav a:focus-visible { text-decoration: underline; }
+
+  nav a[aria-current="page"] {
+    color: var(--link-active);
+    font-weight: 700;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 3px;
+  }
+
+  main {
+    margin-top: 2.5rem;
+    padding-left: 1rem;
+  }
+
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  .cv { line-height: 1.73; }
+
+  h2 {
+    margin: 0 0 0.82em;
+    font-size: 1.3em;
+    line-height: 1.2;
+    color: #2b2b2b;
+  }
+
+  section + section { margin-top: 2.2em; }
+
+  /* Text on the left, dates flush right (the LaTeX \hfill). */
+  .entry {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 1rem;
+  }
+
+  .entry + .entry { margin-top: 1em; }
+
+  .entry > * { grid-column: 1; margin: 0; }
+
+  .entry > .date {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .role { font-style: italic; }
+
+  .download {
+    display: block;
+    width: fit-content;
+    margin: 1.95em auto 0;
+    padding: 0.7em 1.1em;
+    border: 1px solid var(--ink-soft);
+    border-radius: 4px;
+    color: var(--ink-soft);
+    font-size: 0.96em;
+    line-height: 1.3;
+    text-decoration: none;
+  }
+
+  .download:hover,
+  .download:focus-visible { color: var(--link); border-color: var(--link); }
+
+  .download svg {
+    width: 0.6em;
+    height: 0.8em;
+    vertical-align: -0.1em;
+    fill: currentColor;
+  }
+
+  @media (max-width: 760px) {
+    .lb { display: none; }
+    .entry { grid-template-columns: minmax(0, 1fr); }
+    .entry > .date { grid-column: 1; grid-row: auto; text-align: left; }
+  }
+
+  @media (max-width: 860px) {
+    body { padding: 1.5rem 1.25rem 3rem; font-size: 15px; }
+    nav ul { gap: 1.1rem; }
+    nav a { font-size: 0.95rem; }
+    main { padding-left: 0; margin-top: 1.75rem; }
+  }
+
+  @media (max-width: 560px) {
+    body { font-size: 13.5px; }
+    nav ul { gap: 0.85rem; }
+    nav a { font-size: 0.85rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About me</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="coursework.html">Coursework</a></li>
+    <li><a href="cv.html" aria-current="page">CV</a></li>
+    <li><a href="links.html">Links</a></li>
+  </ul>
+</nav>
+
+<main class="cv">
+  <h1 class="visually-hidden">Curriculum vitae</h1>
+
+  <section aria-labelledby="education">
+    <h2 id="education">Education</h2>
+    <div class="entry">
+      <p><strong>The University of Chicago</strong>, Chicago, IL</p>
+      <p class="date">Expected 2030</p>
+      <p><strong>Major:</strong> Neuroscience, S.B. | <strong>Minor:</strong> Health and Society</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="research">
+    <h2 id="research">Research Experience</h2>
+
+    <div class="entry">
+      <p><strong>Environmental Neuroscience Lab</strong>, Department of<br class="lb"> Psychology, The University of Chicago</p>
+      <p class="date">Jul. 2026 – Present</p>
+      <p class="role">Project-based Undergraduate Research Assistant</p>
+      <p>PI: Dr. Marc G. <strong>Berman</strong>, Ph.D.</p>
+      <p>Graduate Supervisor: Elizabeth A. <strong>Janey</strong>, B.S.</p>
+    </div>
+
+    <div class="entry">
+      <p><strong>Awh/Vogel Lab</strong>, Department of Psychology, The University<br class="lb"> of Chicago</p>
+      <p class="date">Aug. 2026 – Present</p>
+      <p class="role">Undergraduate Research Assistant</p>
+      <p>PIs: Dr. Edward K. <strong>Vogel</strong>, Ph.D. &amp; Dr. Edward S. <strong>Awh</strong>,<br class="lb"> Ph.D.</p>
+      <p>Graduate Supervisor: Gengshi <strong>Hu</strong>, B.S.</p>
+    </div>
+  </section>
+
+  <a class="download" href="cv.pdf" download>download my entire cv here <svg viewBox="-2.2 0 11.27 15" aria-hidden="true" focusable="false"><path d="M2.85 0h1.3v11h-1.3z"/><path d="M0 10 3.5 11.2 7 10 3.5 15z"/></svg></a>
+</main>
+
+</body>
+</html>
